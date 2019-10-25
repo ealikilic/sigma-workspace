@@ -1,0 +1,110 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "8eb3c761-d56d-457a-91e6-87222ff2e617": {
+        "id": "8eb3c761-d56d-457a-91e6-87222ff2e617",
+        "parent": null,
+        "name": "sigma-workspace",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "21807a83-a357-455a-a68e-77b8d2898231"
+        ],
+        "isRemovable": false,
+        "filePath": "sigma-workspace"
+      },
+      "7988e418-a29f-4fc6-bbd8-056cfc935b95": {
+        "id": "7988e418-a29f-4fc6-bbd8-056cfc935b95",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.sigmaWorkspacetestt = require(\"./sigma-workspace/testt.py\").handler;"
+      },
+      "21807a83-a357-455a-a68e-77b8d2898231": {
+        "id": "21807a83-a357-455a-a68e-77b8d2898231",
+        "parent": "8eb3c761-d56d-457a-91e6-87222ff2e617",
+        "name": "testt.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "sigma-workspace/testt.py",
+        "code": "def handler(request, response):\n    \n    response.send({\"message\": \"Successfully executed\"})\n",
+        "config": {
+          "runtime": "python2.7",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "7ae744ad-1aa3-4fc5-af21-49369d0bb564": {
+            "id": "7ae744ad-1aa3-4fc5-af21-49369d0bb564",
+            "name": "Unnamed event",
+            "functionId": "21807a83-a357-455a-a68e-77b8d2898231",
+            "event": "{\n    \"test\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      }
+    },
+    "deletedFiles": [
+      "sigma-workspace/test.py",
+      "sigma-workspace/__init__.py",
+      "sigma-workspace/function.js"
+    ],
+    "rootNode": "8eb3c761-d56d-457a-91e6-87222ff2e617",
+    "openFiles": [
+      "21807a83-a357-455a-a68e-77b8d2898231"
+    ],
+    "currentFileId": "21807a83-a357-455a-a68e-77b8d2898231",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "21807a83-a357-455a-a68e-77b8d2898231",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/sigma-workspace",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "sigma-workspace",
+    "projectDescription": "Sigma Setup IDE",
+    "projectVersion": "1.0.0",
+    "projectRegion": "europe-west1",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1572007493815
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "sigma-workspace",
+      "url": "https://github.com/ealikilic/sigma-workspace"
+    }
+  }
+}
